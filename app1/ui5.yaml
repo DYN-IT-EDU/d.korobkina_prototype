@@ -1,0 +1,8 @@
+specVersion: "2.3"
+metadata:
+  name: "sapui5-app1"
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: "app1/webapp"

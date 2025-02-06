@@ -1,0 +1,14 @@
+<mvc:View
+    controllerName="sap.ui.demo.app2.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App>
+        <pages>
+            <Page title="{i18n>title}">
+                <content>
+                    <Text text="{/recipient/name}" />
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>

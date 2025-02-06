@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Second App</title>
+    
+    <!-- Load SAPUI5 -->
+    <script id="sap-ui-bootstrap"
+        src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_belize"
+        data-sap-ui-async="true">
+    </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function () {
+            new sap.m.App({
+                pages: [
+                    new sap.m.Page({
+                        title: "Second App",
+                        content: [
+                            new sap.m.Text({
+                                text: "This is the Second App!",
+                                textAlign: "Center"
+                            })
+                        ]
+                    })
+                ]
+            }).placeAt("content");
+        });
+    </script>
+</head>
+
+<body class="sapUiBody" id="content"></body>
+
+</html>
