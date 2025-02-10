@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Simple SAPUI5 Layout</title>
-    
+    <title>App1</title>
+
     <!-- Load SAPUI5 -->
     <script id="sap-ui-bootstrap"
         src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
@@ -13,34 +13,20 @@
     </script>
 
     <script>
+        // Ensure UI5 loads App1 from local server (Not SAP CDN)
+        sap.ui.loader.config({
+            paths: {
+                "sap/ui/demo/app1": "./"
+            }
+        });
+
         sap.ui.getCore().attachInit(function () {
-            new sap.m.App({
-                pages: [
-                    new sap.m.Page({
-                        showHeader: true,
-                        customHeader: new sap.m.Bar({
-                            contentMiddle: [
-                                new sap.m.Text({ text: "My App Header" })
-                            ],
-                            design: "Header"
-                        }),
-                        content: [
-                            new sap.m.TileContainer({
-                                tiles: [
-                                    new sap.m.StandardTile({
-                                        title: "My Tile",
-                                        info: "Click me",
-                                        icon: "sap-icon://home",
-                                        press: function () {
-                                            alert("Tile Clicked!");
-                                        }
-                                    })
-                                ]
-                            })
-                        ]
-                    })
-                ]
-            }).placeAt("content");
+            sap.ui.require(["sap/ui/core/ComponentContainer"], function (ComponentContainer) {
+                new ComponentContainer({
+                    name: "sap.ui.demo.app1",
+                    height: "100%"
+                }).placeAt("content");
+            });
         });
     </script>
 </head>

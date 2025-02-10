@@ -1,14 +1,25 @@
-<mvc:View
+<mvc:View xmlns:core="sap.ui.core"
     controllerName="sap.ui.demo.app1.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
+    
     <App>
         <pages>
-            <Page title="{i18n>title}">
+            <Page>
+                <customHeader>
+                    <Bar>
+                        <contentMiddle>
+                            <Text text="My App Header" />
+                        </contentMiddle>
+                    </Bar>
+                </customHeader>
                 <content>
-                    <Text text="{/recipient/name}" />
+                        <GenericTile header="My Tile" subheader="Click me" press="onTilePress">
+                        </GenericTile>
+                        <VBox id="mySubCompArea"/>
                 </content>
             </Page>
         </pages>
     </App>
+
 </mvc:View>

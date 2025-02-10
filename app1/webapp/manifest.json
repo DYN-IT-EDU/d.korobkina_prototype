@@ -26,6 +26,12 @@
         }
     },
     "sap.ui5": {
+        "componentUsages": {
+            "app2":{
+                "name": "sap.ui.demo.app2",
+                "manifest":true
+            }
+        },
         "rootView": {
             "viewName": "sap.ui.demo.app1.view.App",
             "type": "XML",

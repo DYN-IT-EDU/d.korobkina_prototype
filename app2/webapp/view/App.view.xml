@@ -1,14 +1,14 @@
-<mvc:View
-    controllerName="sap.ui.demo.app2.controller.App"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+    controllerName="sap.ui.demo.app2.controller.App">
+    
     <App>
         <pages>
-            <Page title="{i18n>title}">
+            <Page title="Second App">
                 <content>
-                    <Text text="{/recipient/name}" />
+                    <Text text="This is the Second App!" textAlign="Center"/>
                 </content>
             </Page>
         </pages>
     </App>
+
 </mvc:View>
