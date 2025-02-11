@@ -4,24 +4,26 @@
     <meta charset="utf-8">
     <title>Second App</title>
     
-    <!-- Load SAPUI5 -->
-    <script id="sap-ui-bootstrap"
+    <!-- Load SAPUI5 (from SAP CDN) -->
+    <script
+        id="sap-ui-bootstrap"
         src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
         data-sap-ui-libs="sap.m"
         data-sap-ui-theme="sap_belize"
         data-sap-ui-async="true">
     </script>
+    
     <script>
         sap.ui.loader.config({
             paths: {
-                "sap/ui/demo/app2": "./"
+                "app2": "./"
             }
         });
 
         sap.ui.getCore().attachInit(function () {
             sap.ui.require(["sap/ui/core/ComponentContainer"], function (ComponentContainer) {
                 new ComponentContainer({
-                    name: "sap.ui.demo.app2",
+                    name: "app2",
                     height: "100%"
                 }).placeAt("content");
             });

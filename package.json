@@ -9,7 +9,8 @@
     "build:app2": "ui5 build --config=app2/ui5.yaml"
   },
   "devDependencies": {
-    "@ui5/cli": "^2.14.2"
+    "@ui5/cli": "^2.14.2",
+    "ui5-middleware-simpleproxy": "^3.4.0"
   },
   "keywords": [],
   "author": "",

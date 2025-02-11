@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>App1</title>
 
-    <!-- Load SAPUI5 -->
+    <!-- Load SAPUI5 from the CDN -->
     <script id="sap-ui-bootstrap"
         src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
         data-sap-ui-libs="sap.m"
@@ -13,17 +13,18 @@
     </script>
 
     <script>
-        // Ensure UI5 loads App1 from local server (Not SAP CDN)
+        // Map "sap.ui.demo.app1" to current folder
         sap.ui.loader.config({
             paths: {
                 "sap/ui/demo/app1": "./"
             }
         });
 
+        // Bootstraps app1 by creating its ComponentContainer
         sap.ui.getCore().attachInit(function () {
             sap.ui.require(["sap/ui/core/ComponentContainer"], function (ComponentContainer) {
                 new ComponentContainer({
-                    name: "sap.ui.demo.app1",
+                    name: "sap.ui.demo.app1", // app1's own namespace
                     height: "100%"
                 }).placeAt("content");
             });
@@ -32,5 +33,4 @@
 </head>
 
 <body class="sapUiBody" id="content"></body>
-
 </html>
