@@ -5,7 +5,8 @@
         <pages>
             <Page title="Second App">
                 <content>
-                    <Text text="This is the Second App!" textAlign="Center"/>
+                    <Text text="This is the Second App!"/>
+                    <Input value="{sharedModel>/greeting}" editable="true" />
                 </content>
             </Page>
         </pages>

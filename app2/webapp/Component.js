@@ -14,13 +14,17 @@ sap.ui.define([
             UIComponent.prototype.init.apply(this, arguments);
 
             // Example: set a simple JSON model
-            var oData = {
-                recipient: {
-                    name: "Universe"
-                }
-            };
-            var oModel = new JSONModel(oData);
-            this.setModel(oModel);
+
+            this.getRootControl().addEventDelegate({
+                onAfterRendering: function() {
+                    var oSharedModel = this.getModel("sharedModel");
+                    if (oSharedModel) {
+                        console.log("Child Component - Received Shared Model after rendering:", oSharedModel.getData());
+                    } else {
+                        console.warn("Child Component - Shared Model Not Found!");
+                    }
+                }.bind(this)
+            });
         }
     });
 });

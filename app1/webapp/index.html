@@ -25,7 +25,8 @@
             sap.ui.require(["sap/ui/core/ComponentContainer"], function (ComponentContainer) {
                 new ComponentContainer({
                     name: "sap.ui.demo.app1", // app1's own namespace
-                    height: "100%"
+                    height: "100%",
+                    propagateModel: true
                 }).placeAt("content");
             });
         });
